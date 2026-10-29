@@ -49,8 +49,7 @@ Inside you'll find the folders `cadwork_plugin`, `server` and `tests`.
    ...\API.x64\claude_bridge\claude_bridge.py
    ```
    The folder and the file must both be called `claude_bridge`.
-3. Restart cadwork 3D. **claude_bridge** now appears in the plugin bar, the panel that lists
-   Python plugins.
+3. Restart cadwork 3D. **claude_bridge** now appears under **Window → User Plugins**.
 
 ### Step 3: Install Python
 
@@ -160,7 +159,7 @@ claude mcp list
 
 1. Open cadwork 3D with a **new, empty test model**. Don't use a real project for the first
    test.
-2. Click **claude_bridge** in the plugin bar. **cadwork will look frozen. That's expected**
+2. Go to **Window → User Plugins** and click **claude_bridge**. **cadwork will look frozen. That's expected**
    (see below).
 3. In Claude Desktop, start a new chat and send:
    > Check the cadwork status, then draw one 100×200 mm beam, 3 m long, from the origin along X. Then stop the bridge.
@@ -172,7 +171,7 @@ claude mcp list
 ## Daily use
 
 1. Open your model in cadwork.
-2. Click **claude_bridge** in the plugin bar.
+2. Go to **Window → User Plugins** and click **claude_bridge**.
 3. Ask Claude what you need, for example:
    - *"List the beams in the model with their sizes."*
    - *"Draw a 6 × 4 m floor frame: 120×240 C24 joists at 625 mm spacing, group House, subgroup Ground floor."*
@@ -189,7 +188,7 @@ normal. To get control back:
 - ask Claude to **stop the bridge**, or
 - wait: the plugin stops by itself after **30 minutes** without requests.
 
-Click **claude_bridge** again to reconnect.
+Click **claude_bridge** again (Window → User Plugins) to reconnect.
 
 Tips:
 - Everything is in **millimetres**. Points are `[x, y, z]`.
@@ -204,7 +203,7 @@ Tips:
 | Problem | Fix |
 |---|---|
 | Claude says *"Cannot reach the cadwork bridge"* | The plugin isn't running. Click **claude_bridge** in cadwork, then ask again. |
-| **claude_bridge** isn't in the plugin bar | Check that the path is exactly `...\API.x64\claude_bridge\claude_bridge.py`, then restart cadwork. |
+| **claude_bridge** isn't under Window → User Plugins | Check that the path is exactly `...\API.x64\claude_bridge\claude_bridge.py`, then restart cadwork. |
 | **cadwork** isn't listed in Claude's Settings → Developer | The config file has a typo. Check the commas and that every `\` is written `\\`. Quit Claude Desktop fully and reopen it. |
 | cadwork is listed but shows as **failed** | Click **View logs** ("Ver registros") and check the Python path. Running `(Get-Command python).Source` again shows the right one. |
 | My edit to the config file disappeared | Claude Desktop was still open and overwrote it. Quit it from the tray icon, edit, save, then reopen it. |
